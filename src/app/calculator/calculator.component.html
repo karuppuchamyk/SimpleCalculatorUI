@@ -1,0 +1,71 @@
+<input class="form-control form-control-lg calculator-screen text-right" value={{resultValue}} readonly>
+<span class="curr-operator float-right">{{curruntOperator}}</span>
+
+<div class="calculator-keys" #keys>
+  <div class="row mt-3">
+    <div class="col-9">
+      <button class="all-clear btn btn-secondary btn-block" value="all-clear">AC</button>
+    </div>
+    <div class="col-3">
+      <button class="operator btn btn-primary btn-block" value="/">/</button>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="1">1</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="2">2</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="3">3</button>
+    </div>
+    <div class="col-3">
+      <button class="operator btn btn-primary btn-block" value="*">x</button>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="4">4</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="5">5</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="6">6</button>
+    </div>
+    <div class="col-3">
+      <button class="operator btn btn-primary btn-block" value="+">+</button>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="7">7</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="8">8</button>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-secondary btn-block" value="9">9</button>
+    </div>
+    <div class="col-3">
+      <button class="operator btn btn-primary btn-block" value="-">-</button>
+    </div>
+  </div>
+  
+  <div class="row mt-3">
+    <div class="col-6">
+      <button class="btn btn-secondary btn-block" value="0">0</button>
+    </div>
+    <div class="col-3">
+      <button class="decimal btn btn-secondary btn-block" value=".">.</button>
+    </div>
+    <div class="col-3">
+      <button autofocus class="equal-sign operator btn btn-primary btn-block" value="=">=</button>
+    </div>
+  </div>
+
+</div>
