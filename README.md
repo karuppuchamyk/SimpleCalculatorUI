@@ -11,7 +11,7 @@ Install NodeJS:
     Install node js -> https://nodejs.org/en/download/
 
 Install Angular CLI:
-    npm install –g @angular/cli@7.2
+    npm install –g @angular/cli@7.0.3
 
 Chekout code:
     git clone git@github.com:karuppuchamyk/SimpleCalculatorUI.git
