@@ -15,8 +15,16 @@ describe('CalculatorService', () => {
       providers: [CalculatorService, HttpClient]
   }));
 
-  it('should be created', () => {
+  it('should be created', async () => {
     const service: CalculatorService = TestBed.get(CalculatorService);
     expect(service).toBeTruthy();
+    let value;
+      await service.performCalculation("+", 2,5).toPromise().then(
+       (res) => { 
+        console.log(res); 
+        value = JSON.parse(JSON.stringify(res)).result;
+        
+        expect(value).toEqual(7);
+       });
   });
 });

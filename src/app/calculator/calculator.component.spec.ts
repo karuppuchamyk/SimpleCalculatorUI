@@ -21,7 +21,7 @@ describe('CalculatorComponent', () => {
       ],
       providers: [CalculatorService]
     })
-    .compileComponents();
+    .compileComponents(); 
   }));
 
   beforeEach(() => {
@@ -34,26 +34,13 @@ describe('CalculatorComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('operations testing', () => {
+  it('value access testing', () => {
     const fixture = TestBed.createComponent(CalculatorComponent);
     const app = fixture.debugElement.componentInstance;
-    
-    let result = app.performCalculation("+", 2, 5);
-    expect(result).toEqual("7");
-
-    result = app.performCalculation("-", 9, 5);
-    expect(result).toEqual("4");
-
-    result = app.performCalculation("*", 2, 5);
-    expect(result).toEqual("10");
-  });
-
-  it('Initial value testing', () => {
-    const fixture = TestBed.createComponent(CalculatorComponent);
-    const app = fixture.debugElement.componentInstance;
+    app.resultValue = 10;
     let result = app.resultValue;
   
-    expect(result).toEqual('');
+    expect(result).toEqual(10);
   });
 
 });
