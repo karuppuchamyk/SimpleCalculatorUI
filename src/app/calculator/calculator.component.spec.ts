@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorComponent } from './calculator.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from '../app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { CalculatorService } from '../calculator.service';
 
 describe('CalculatorComponent', () => {
   let component: CalculatorComponent;
@@ -8,7 +13,13 @@ describe('CalculatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [ CalculatorComponent ],
+      imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule 
+      ],
+      providers: [CalculatorService]
     })
     .compileComponents();
   }));
@@ -40,8 +51,7 @@ describe('CalculatorComponent', () => {
   it('Initial value testing', () => {
     const fixture = TestBed.createComponent(CalculatorComponent);
     const app = fixture.debugElement.componentInstance;
-    
-    let result = app.calculator.displayValue;
+    let result = app.resultValue;
   
     expect(result).toEqual('');
   });

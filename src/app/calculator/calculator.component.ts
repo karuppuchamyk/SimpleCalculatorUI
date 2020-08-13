@@ -54,9 +54,7 @@ export class CalculatorComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngOnInit() {
-    //
-  }
+  ngOnInit() {  }
 
   inputDigit(digit) {  
     if (calculator.waitingForSecondOperand === true) {
@@ -75,7 +73,7 @@ export class CalculatorComponent implements OnInit, AfterViewInit {
   }
 
   async handleOperator(nextOperator) {
-    if (calculator.displayValue == '') {
+    if (calculator.displayValue === '') {
       return;
     }
     const inputValue = parseFloat(calculator.displayValue);
@@ -88,7 +86,7 @@ export class CalculatorComponent implements OnInit, AfterViewInit {
     if (calculator.firstOperand == null) {
       calculator.firstOperand = inputValue;
     } else if (calculator.operator) {
-      if (calculator.operator == '=') {
+      if (calculator.operator === '=') {
         calculator.firstOperand = inputValue;
       } else {
         const currentValue = calculator.firstOperand || 0;
@@ -113,6 +111,7 @@ export class CalculatorComponent implements OnInit, AfterViewInit {
         if (JSON.parse(JSON.stringify(res)).result) {
           value = JSON.parse(JSON.stringify(res)).result;
         } else {
+          // In error case just showing actual message
           value = JSON.parse(JSON.stringify(res)).responseDetails;
         }
       }).catch((error) => {
