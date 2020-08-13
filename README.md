@@ -28,3 +28,4 @@ ng build --prod
 # Test
 For testing we need to run the Java backend application first()
 then use 'ng test' and get the results in browser.
+![Jasmine karma - test case result](https://user-images.githubusercontent.com/36220438/90118377-c688fd00-dd75-11ea-8523-4e63977f12fc.PNG)
