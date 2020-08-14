@@ -22,6 +22,8 @@ Navigate inside project folder and run => npm install (It will install all the d
 # Run
 ng serve (It will start at http://localhost:4200)
 
+![app](https://user-images.githubusercontent.com/36220438/90220646-38b91a80-de26-11ea-96a2-858f54ba34e7.PNG)
+
 # Prod Build
 ng build --prod
 
